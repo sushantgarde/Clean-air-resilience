@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Clean Air &amp; Climate Resilience logo mark</title>
+  <desc id="desc">A minimalist teal and dark navy environmental monitoring icon combining a leaf, airflow, globe and satellite signal.</desc>
+
+  <!-- Outer emblem -->
+  <circle cx="160" cy="160" r="148" fill="none" stroke="#0B1220" stroke-width="14"/>
+  <circle cx="160" cy="160" r="128" fill="#F7FFFE"/>
+
+  <!-- Leaf -->
+  <path d="M141 263
+           C78 241 58 183 82 128
+           C101 84 143 54 194 42
+           C182 88 190 121 218 148
+           C245 175 244 217 212 244
+           C191 261 166 269 141 263Z"
+        fill="#4FD1C5"/>
+
+  <path d="M106 221
+           C127 183 153 147 187 111"
+        fill="none"
+        stroke="#0B1220"
+        stroke-width="11"
+        stroke-linecap="round"/>
+
+  <!-- Airflow -->
+  <path d="M96 238
+           C133 207 171 206 205 223
+           C231 236 253 230 263 208"
+        fill="none"
+        stroke="#0B1220"
+        stroke-width="11"
+        stroke-linecap="round"/>
+
+  <path d="M113 261
+           C149 240 181 243 210 257
+           C232 268 251 263 266 247"
+        fill="none"
+        stroke="#4FD1C5"
+        stroke-width="10"
+        stroke-linecap="round"/>
+
+  <!-- Satellite -->
+  <g transform="translate(192 61) rotate(24)">
+    <rect x="-10" y="0" width="45" height="57" rx="8" fill="#0B1220"/>
+    <rect x="-52" y="9" width="29" height="39" rx="4" fill="#0B1220"/>
+    <rect x="45" y="9" width="29" height="39" rx="4" fill="#0B1220"/>
+
+    <path d="M-52 22H-23M-52 35H-23M45 22H74M45 35H74"
+          stroke="#4FD1C5"
+          stroke-width="4"/>
+
+    <path d="M13 57V74"
+          stroke="#0B1220"
+          stroke-width="6"
+          stroke-linecap="round"/>
+
+    <ellipse cx="13" cy="80" rx="24" ry="10" fill="#0B1220"/>
+  </g>
+
+  <!-- Satellite signal -->
+  <path d="M242 111
+           C258 122 266 139 266 156"
+        fill="none"
+        stroke="#4FD1C5"
+        stroke-width="9"
+        stroke-linecap="round"/>
+
+  <path d="M256 96
+           C280 112 293 134 293 160"
+        fill="none"
+        stroke="#4FD1C5"
+        stroke-width="9"
+        stroke-linecap="round"/>
+
+  <!-- Orbit accent -->
+  <path d="M51 153
+           A110 110 0 0 1 111 61"
+        fill="none"
+        stroke="#4FD1C5"
+        stroke-width="9"
+        stroke-linecap="round"/>
+
+  <circle cx="47" cy="164" r="9" fill="#4FD1C5"/>
+</svg>

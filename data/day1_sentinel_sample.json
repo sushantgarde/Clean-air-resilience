@@ -1,0 +1,20 @@
+{
+  "region_name": "Punjab-Haryana Belt (Indo-Gangetic Plain)",
+  "bbox": [
+    75.5,
+    29.5,
+    77.5,
+    31.5
+  ],
+  "time_interval": [
+    "2025-10-15",
+    "2025-11-15"
+  ],
+  "grid_shape": [
+    224,
+    189
+  ],
+  "mean_aerosol_index": 0.02714584209024906,
+  "min_aerosol_index": -1.1491081714630127,
+  "max_aerosol_index": 0.4837295114994049
+}

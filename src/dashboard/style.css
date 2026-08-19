@@ -1,0 +1,143 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0b1220;
+  color: #e2e8f0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.topbar {
+  padding: 10px 24px;
+  background: #121b2e;
+  border-bottom: 1px solid #1f2c47;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  background: #F7FFFE;
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+.topbar h1 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.region-label {
+  color: #8393ab;
+  font-size: 0.85rem;
+}
+
+.region-toggle {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.region-btn {
+  background: #17233b;
+  color: #8393ab;
+  border: 1px solid #263454;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.region-btn.active {
+  color: #4fd1c5;
+  border-color: #4fd1c5;
+}
+
+.region-btn:hover {
+  background: #1c2740;
+}
+
+.layout {
+  display: flex;
+  height: calc(100vh - 54px);
+}
+
+#map {
+  flex: 1;
+  height: 100%;
+}
+
+.panel {
+  width: 340px;
+  padding: 20px;
+  overflow-y: auto;
+  background: #0e1626;
+  border-left: 1px solid #1f2c47;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: #121b2e;
+  border: 1px solid #1f2c47;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #8393ab;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4fd1c5;
+}
+
+.trend {
+  font-size: 0.85rem;
+  color: #63b3ed;
+  margin-top: 4px;
+}
+
+#forecast-values {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+#alert-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+#refresh-btn {
+  background: #17233b;
+  color: #4fd1c5;
+  border: 1px solid #263454;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+#refresh-btn:hover {
+  background: #1c2740;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #121b2e;
+  color: #e2e8f0;
+}
+
+.leaflet-popup-tip {
+  background: #121b2e;
+}

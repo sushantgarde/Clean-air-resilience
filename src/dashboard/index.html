@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clean Air & Climate Resilience — Hotspot Dashboard</title>
+<link rel="icon" type="image/svg+xml" href="/docs/website-logo-title.svg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <img src="/docs/website-logo.svg" alt="Clean Air & Climate Resilience logo" class="logo">
+    <span class="region-label" id="region-label">Punjab-Haryana Belt — Stubble-Burning Season</span>
+    <div class="region-toggle">
+      <button class="region-btn active" data-region="punjab-haryana">Punjab-Haryana</button>
+      <button class="region-btn" data-region="delhi-ncr">Delhi-NCR</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <div id="map"></div>
+
+    <aside class="panel">
+      <div class="card" id="score-card">
+        <div class="label">Hotspot score</div>
+        <div class="score" id="score-value">--</div>
+        <div class="trend" id="trend-value">Loading...</div>
+      </div>
+
+      <div class="card" id="forecast-card">
+        <div class="label">3-day PM2.5 forecast</div>
+        <div id="forecast-values">--</div>
+      </div>
+
+      <div class="card" id="alert-card">
+        <div class="label">Generated alert</div>
+        <div id="alert-text">Loading alert...</div>
+      </div>
+
+      <button id="refresh-btn">Refresh</button>
+    </aside>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

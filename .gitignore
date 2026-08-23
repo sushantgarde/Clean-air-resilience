@@ -12,15 +12,6 @@ data/weather_aqi_history.json
 data/sample_images/*
 !data/sample_images/.gitkeep
 
-# Misc project artifacts not meant for the repo
-MYPROJECT.zip
-image.png
-Demo Video.mp4
-Demo Video.zip
-docs/km_demo video_2160p_60f_20260818_190517.mp4
-docs/Clean-Air-and-Climate-Resilience.pptx
-docs/Thmbnail.png
-docs/Clean-Air-and-Climate-Resilience-Hackathon-Final-Slide2-Fixed.pptx
 
 # OS/editor junk
 .DS_Store

@@ -18,6 +18,8 @@ DOCS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", 
 app = Flask(__name__, static_folder=DASHBOARD_DIR, static_url_path="")
 CORS(app)  # harmless to keep even though the dashboard is now same-origin
 
+import json
+
 # Static region metadata — extend this dict to add more regions to the mock
 # DEMO NOTE: delhi-ncr uses illustrative satellite/citizen values, not a live
 # pull — this demonstrates the pipeline generalizes to a second region without
@@ -26,7 +28,7 @@ CORS(app)  # harmless to keep even though the dashboard is now same-origin
 REGIONS = {
     "punjab-haryana": {
         "display_name": "Punjab-Haryana Belt",
-        "satellite_aerosol": -0.18,   # from data/day1_sentinel_sample.json
+        "satellite_aerosol": -0.18,   # fallback — overridden by live data when available, see get_satellite_aerosol()
         "citizen_severity_score": 3,  # High, from Gemini Vision test results
     },
     "delhi-ncr": {
@@ -35,6 +37,34 @@ REGIONS = {
         "citizen_severity_score": 4,  # Severe — NCR typically sees compounded urban + drifted smoke
     }
 }
+
+LIVE_SATELLITE_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "live_satellite_sample.json"
+)
+
+
+def get_satellite_aerosol(region_key):
+    """Returns the satellite aerosol value for a region, preferring a live
+    rolling-window pull (refreshed periodically via GitHub Actions) over the
+    static fallback baked into REGIONS.
+
+    Only punjab-haryana has a live-refreshed file in this version — other
+    regions fall back to their static illustrative value.
+
+    Args:
+        region_key (str): Key into the REGIONS dict.
+
+    Returns:
+        float: Aerosol index value to use for scoring.
+    """
+    if region_key == "punjab-haryana" and os.path.exists(LIVE_SATELLITE_PATH):
+        try:
+            with open(LIVE_SATELLITE_PATH) as f:
+                live_data = json.load(f)
+            return live_data["mean_aerosol_index"]
+        except (json.JSONDecodeError, KeyError, OSError):
+            pass  # fall through to static value on any read/parse issue
+    return REGIONS[region_key]["satellite_aerosol"]
 
 
 def compute_region_status(region_key):
@@ -55,7 +85,7 @@ def compute_region_status(region_key):
     forecast_mean = float(forecast.mean())
 
     score = calculate_hotspot_score(
-        satellite_aerosol=region["satellite_aerosol"],
+        satellite_aerosol=get_satellite_aerosol(region_key),
         citizen_severity_score=region["citizen_severity_score"],
         forecasted_aqi=forecast_mean
     )

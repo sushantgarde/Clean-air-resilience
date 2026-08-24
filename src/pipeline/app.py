@@ -127,6 +127,10 @@ def get_hotspot(region_key):
 def get_all_hotspots():
     return jsonify([compute_region_status(k) for k in REGIONS])
 
+@app.route("/healthcheckz")
+def get_all_health():
+    return {Status: "OK"}
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))

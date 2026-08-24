@@ -129,7 +129,7 @@ def get_all_hotspots():
 
 @app.route("/healthcheckz")
 def get_all_health():
-    return {Status: "OK"}
+    return {'Status': "OK"}
 
 
 if __name__ == "__main__":

@@ -28,7 +28,7 @@ jobs:
           SENTINELHUB_CLIENT_ID: ${{ secrets.SENTINELHUB_CLIENT_ID }}
           SENTINELHUB_CLIENT_SECRET: ${{ secrets.SENTINELHUB_CLIENT_SECRET }}
           OPENAQ_API_KEY: ${{ secrets.OPENAQ_API_KEY }}
-        run: python src/pipeline/refresh_live_data.py
+        run: python -m src.pipeline.refresh_live_data
 
       - name: Commit and push updated data
         run: |

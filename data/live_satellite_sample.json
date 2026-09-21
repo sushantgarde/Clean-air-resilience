@@ -10,12 +10,12 @@
     "2026-09-07",
     "2026-09-21"
   ],
-  "refreshed_at": "2026-09-21T02:29:11.760278Z",
+  "refreshed_at": "2026-09-21T11:31:01.248516Z",
   "grid_shape": [
     224,
     189
   ],
-  "mean_aerosol_index": NaN,
-  "min_aerosol_index": NaN,
-  "max_aerosol_index": NaN
+  "mean_aerosol_index": -0.4846018850803375,
+  "min_aerosol_index": -1.3952237367630005,
+  "max_aerosol_index": 1.2218304872512817
 }

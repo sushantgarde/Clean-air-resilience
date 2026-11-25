@@ -7,15 +7,15 @@
     31.5
   ],
   "time_interval": [
-    "2026-11-10",
-    "2026-11-24"
+    "2026-11-11",
+    "2026-11-25"
   ],
-  "refreshed_at": "2026-11-24T16:44:29.305147Z",
+  "refreshed_at": "2026-11-25T01:46:17.573646Z",
   "grid_shape": [
     224,
     189
   ],
-  "mean_aerosol_index": 0.23949754238128662,
-  "min_aerosol_index": -0.8501636385917664,
-  "max_aerosol_index": 0.7173910737037659
+  "mean_aerosol_index": NaN,
+  "min_aerosol_index": NaN,
+  "max_aerosol_index": NaN
 }
